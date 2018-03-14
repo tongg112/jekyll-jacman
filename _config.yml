@@ -28,8 +28,8 @@ defaults:
 paginate: 20
 
 #### Site
-title : Jekyll Jacman
-tagline: A fresh looking and responsive theme for Jekyll
+title : 以终为始
+tagline: 以终为始
 assets: /assets
 url:
 baseurl:
