@@ -3,6 +3,7 @@ layout: post
 title:  "最近读书计划"
 date:   2018-04-06 00:08:00 +0800
 categories: Read
+music: <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=25830063&auto=1&height=32"></iframe>
 ---
 再忙也不能忘记学习。最近书读的少了，每天30min时间都没有保证。  
 而且作为一个IT男，基础的技术知识需要再加强下了。于是决定拜读下朋友推荐的书籍~
@@ -42,6 +43,4 @@ categories: Read
 > 250页内容，计划读完时间2周。
 >
 > 坚持每天阅读
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=298 height=52 src="//music.163.com/outchain/player?type=2&id=25830063&auto=1&height=32"></iframe>
 
