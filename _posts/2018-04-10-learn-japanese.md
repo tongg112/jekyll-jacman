@@ -2,7 +2,7 @@
 layout: post
 title:  "日语学习《みんなの日本語》"
 date:   2018-04-10 22:00:00 +0800
-categories: Read
+categories: Japanese
 ---
 去年年底去了一趟日本，从此开始对日语感兴趣。
 在NHK学习了几周的《[简明日语](https://www.nhk.or.jp/lesson/chinese/learn/list/)》，然后终于买了《大家的日语》教材来学习。
@@ -17,6 +17,8 @@ categories: Read
 ---
 
 ### 2018年4月10日
+
+```
 
 わたし | 我
 
@@ -35,3 +37,5 @@ categories: Read
 ～ちゃん | 用于小孩的名字后
 
  ～君（～くん） | ~君（用于男孩名字后） 
+
+```
