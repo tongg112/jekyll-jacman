@@ -5,6 +5,8 @@ date:   2018-04-26 22:00:00 +0800
 categories: Redis
 ---
 
+最近在看《redis实战》，记录了书中的一些内容方便查阅。
+
 ## redis的适用场景
 
 - 取最新 N 个数据的操作
@@ -129,5 +131,140 @@ redis 127.0.0.1:6379> get age
 "15"
 redis 127.0.0.1:6379> strlen age
 (integer) 2
+redis 127.0.0.1:6379>
+```
+
+## 常用命令
+
+> keys *，返回满足给定 pattern 的所有 key
+
+```
+redis 127.0.0.1:6379> keys *
+1) "myzset2"
+2) "myzset3"
+3) "mylist"
+4) "myset2"
+5) "myset3"
+6) "myset4"
+7) "k_zs_1"
+8) "myset5"
+9) "myset6"
+10) "myset7"
+11) "myhash"
+12) "myzset"
+13) "age"
+14) "myset"
+15) "mylist5"
+16) "mylist6"
+17) "mylist7"
+18) "mylist8"
+redis 127.0.0.1:6379> keys mylist*
+1) "mylist"
+2) "mylist5"
+3) "mylist6"
+4) "mylist7"
+5) "mylist8"
+redis 127.0.0.1:6379>
+```
+
+> exists，确认一个 key 是否存在
+
+```
+redis 127.0.0.1:6379> exists HongWan
+(integer) 0
+redis 127.0.0.1:6379> exists age
+(integer) 1
+redis 127.0.0.1:6379>
+```
+
+> del，删除一个 key
+
+```
+redis 127.0.0.1:6379> del age
+(integer) 1
+redis 127.0.0.1:6379> exists age
+(integer) 0
+redis 127.0.0.1:6379>
+```
+
+> expire，设置一个 key 的过期时间(单位:秒)
+
+```
+redis 127.0.0.1:6379> expire addr 10
+(integer) 1
+redis 127.0.0.1:6379> ttl addr
+(integer) 8
+redis 127.0.0.1:6379> ttl addr
+(integer) 1
+redis 127.0.0.1:6379> ttl addr
+(integer) -1
+redis 127.0.0.1:6379>
+```
+
+> move，将当前数据库中的 key 转移到其它数据库中
+
+```
+redis 127.0.0.1:6379> select 0
+OK
+redis 127.0.0.1:6379> set age 30
+OK
+redis 127.0.0.1:6379> get age
+"30"
+redis 127.0.0.1:6379> move age 1
+(integer) 1
+redis 127.0.0.1:6379> get age
+(nil)
+redis 127.0.0.1:6379> select 1
+OK
+redis 127.0.0.1:6379[1]> get age
+"30"
+redis 127.0.0.1:6379[1]>
+```
+
+> persist，移除给定 key 的过期时间
+
+```
+redis 127.0.0.1:6379[1]> expire age 300
+(integer) 1
+redis 127.0.0.1:6379[1]> ttl age
+(integer) 294
+redis 127.0.0.1:6379[1]> persist age
+(integer) 1
+redis 127.0.0.1:6379[1]> ttl age
+(integer) -1
+redis 127.0.0.1:6379[1]>
+```
+
+> randomkey，随机返回 key 空间的一个 key
+
+```
+redis 127.0.0.1:6379> randomkey
+"mylist7"
+redis 127.0.0.1:6379> randomkey
+"mylist5"
+redis 127.0.0.1:6379>
+```
+
+> rename，重命名 key
+
+```
+redis 127.0.0.1:6379[1]> keys *
+1) "age"
+redis 127.0.0.1:6379[1]> rename age age_new
+OK
+redis 127.0.0.1:6379[1]> keys *
+1) "age_new"
+redis 127.0.0.1:6379[1]>
+```
+
+> type，返回值的类型
+
+```
+redis 127.0.0.1:6379> type addr
+string
+redis 127.0.0.1:6379> type myzset2
+zset
+redis 127.0.0.1:6379> type mylist
+list
 redis 127.0.0.1:6379>
 ```
