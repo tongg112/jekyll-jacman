@@ -18,3 +18,9 @@ U盘中存放着我常用软件安装包，插在任何电脑（Windows）上都
 2. 使用Google Drive在Windows环境下进行同步，主要是台式机和笔记本的数据同步，Ubuntu下Google Drive暂不支持文件夹同步（或者我没有找到）。
 3. Dropbox中主要是常用的markdown格式的笔记文件和思维导图文件。
 4. Google Drive中主要是图片扫描件，和Windows下的Ps&Ai的稿件，常用软件安装包和归档文件。
+
+## 坚果云替代方案
+
+由于在新的Ubuntu 1804上，坚果云没法无脑安装使用，所以我们需要换一种方式~使用dropbox来储存在Linux上的修改。希望在windows下两个软件可以使用同一个文件夹。  
+使用坚果云同步dropbox的文件就可以了。  
+不过坚果云的流量很快用光了，还是暂时使用Dropbox吧。  
