@@ -14,4 +14,8 @@ Ubuntu下的截图软件之前在14.04和16.04版本使用shutter是非常顺手
 
 安装与配置可以参考GitHub仓库中的说明文档。
 
+Ubuntu18.04可以支持apt安装了。（2018年05月07日更新）
+
+> sudo apt-get install flameshot
+
 参考链接：https://github.com/lupoDharkael/flameshot
