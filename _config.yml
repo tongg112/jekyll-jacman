@@ -33,6 +33,7 @@ tagline: 高效每一天
 assets: /assets
 url:
 baseurl:
+resourceurl: http://resource.xtongcn.com/xtong/
 
 #### Language
 language: zh-CN    ## blog site languages: en, zh-CN, zh-TW, de
