@@ -17,7 +17,7 @@ docker-compose下载地址：https://github.com/docker/compose/releases/tag/1.17
 
 下载docker-compose，复制到/usr/local/bin/docker-compose（或建立软连接）
 
-```
+```shell
 sudo chmod +x docker-compose
 
 sudo gpasswd -a ${USER} docker
@@ -43,7 +43,7 @@ laradock官网：http://laradock.io/
 
 在pecl网站上下载redis-3.1.4.tgz并复制到php-fpm目录下，然后修改dockerfile：
 
-```
+```shell
 # COPY压缩包，可以放在顶部，这样其他扩展编译安装不需要重复执行了
 COPY ./*.tgz /tmp/
 
@@ -67,7 +67,7 @@ RUN if [ ${INSTALL_PHPREDIS} = true ]; then \
 ;fi
 ```
 并注释掉workspace文件夹下的dockerfile的redis相关代码
-```
+```shell
 ###########################################################################
 # PHP REDIS EXTENSION
 ###########################################################################
@@ -85,7 +85,7 @@ ARG PHP_VERSION=${PHP_VERSION}
 
 其他扩展如xdebug也同样
 
-```
+```shell
 ###########################################################################
 # xDebug:
 ###########################################################################
@@ -149,7 +149,7 @@ PHPstorm的servers配置：laradock容器
 除了按照上图对PHPstorm进行配置之外，还要配置xdebug相关的参数
 
 php-fpm与workspace目录下的xdebug.ini，修改
-```
+```shell
 xdebug.remote_autostart=1
 xdebug.remote_enable=1
 ```
