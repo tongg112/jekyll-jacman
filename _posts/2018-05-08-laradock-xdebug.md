@@ -11,7 +11,7 @@ categories: Docker
 
 在Ubuntu1804下，直接使用apt安装docker即可
 
-###安装docker-compose
+### 安装docker-compose
 
 docker-compose下载地址：https://github.com/docker/compose/releases/tag/1.17.0
 
